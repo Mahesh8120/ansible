@@ -1,9 +1,8 @@
-- name: playbook using variables
+- name: variables from PLAY level
   hosts: localhost
-  vars_files: 
-  - variables.yaml    
+  vars_files:
+  - variables.yaml
   tasks:
-  - name: variables in playbook
+  - name: check variables
     ansible.builtin.debug:
-      msg: "Hi, I am Learning {{Course}}, Trainer is {{Trainer}}"
-
+      msg: "Hi, I am learning {{Course}}, Trainer is {{Trainer}}, Duration is {{Duration}}"
