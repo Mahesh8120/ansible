@@ -2,14 +2,14 @@
   hosts: localhost
   vars_prompt: 
    - name: USERNAME
-    prompt: please enter your name
-    private: false
+     prompt: please enter your name
+     private: false
    - name: PASSWORD
-    PROMPT: please enter your password
-    private: true
+     PROMPT: please enter your password
+     private: true
   tasks:
    - name: check vars 
-    ansible.built.debug:
-     msg: "user name is {{USERNAME}}, password is {{PASSWORD}}" 
+     ansible.built.debug:
+      msg: "user name is {{USERNAME}}, password is {{PASSWORD}}" 
 
      
