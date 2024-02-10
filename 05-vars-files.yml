@@ -1,8 +1,7 @@
 - name: playbook using variables
   hosts: localhost
-  vars: 
-    Course: "Devops"
-    Trainer: "Sivakumar"
+  vars_files: 
+  - variables.yaml    
   tasks:
   - name: variables in playbook
     ansible.builtin.debug:
