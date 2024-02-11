@@ -1,15 +1,13 @@
-- name: variables from porompt
+ - name: variables from porompt
   hosts: localhost
-  vars_prompt: 
-  - name: USERNAME
-    prompt: please enter your name
-    private: false
-  - name: PASSWORD
-    PROMPT: please enter your password
-    private: true
+  vars_prompt:
+    - name: USERNAME
+      prompt: please enter your name
+      private: false
+    - name: PASSWORD
+      PROMPT: please enter your password
+      private: true
   tasks:
-  - name: check vars 
-    ansible.built.debug:
-      msg: "user name is {{USERNAME}}, password is {{PASSWORD}}" 
-
-     
+    - name: check vars
+      ansible.built.debug:
+        msg: 'user name is {{USERNAME}}, password is {{PASSWORD}}'
